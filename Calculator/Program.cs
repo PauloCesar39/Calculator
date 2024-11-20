@@ -10,12 +10,40 @@ namespace MyApp // Note: actual namespace depends on the project name.
             // subtracao();
             // Divisao();
             //multiplicacao();
+            TelaDeBoasVindas();
             Menu(); 
+
+        }
+        
+        static void TelaDeBoasVindas()
+        {
+            Console.Clear();
+            Console.WriteLine("seja bem vindo");
+            Console.WriteLine("Digite seu Nome e Sobrenome, para fazer login");
+            string usuario = "";
+            string  Senha = "";
+
+            while (usuario != "Paulo" && Senha != "040704Pc")
+            {
+                Console.WriteLine("Digite seu usuario: ");
+                usuario = (Console.ReadLine());
+                Console.WriteLine("Digite sua senha: ");
+               Senha = (Console.ReadLine());
+
+               if (usuario != "Paulo" || Senha != "040704Pc")
+               {
+                   Console.WriteLine("Digite a senha novamente, ocorreu um erro! ");   
+               }
+
+            }
+            Console.WriteLine("Parabens voce entrou.");
+
 
         }
 
         static void Menu()
         {
+            
             Console.Clear();
 
             Console.WriteLine("O que deseja fazer?");
@@ -133,5 +161,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             */
            
         }
+
+        
     }
 }
